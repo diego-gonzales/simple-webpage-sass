@@ -1,0 +1,17 @@
+
+.prices {
+  .prev {
+    font-size: f_size(2);
+    font-weight: bolder;
+    color: $font-color;
+    text-decoration: line-through;
+  }
+  .now {
+    font-size: f_size(5);
+    font-weight: bolder;
+  }
+}
+
+.food-image {
+  width: 90%;
+}

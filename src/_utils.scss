@@ -1,0 +1,58 @@
+// Functions: Una función siempre tiene que tener un return (un mixin no)
+@function f_size($value) {
+  @return $value * $unit;
+}
+
+// Mixins y condicionales
+@mixin m_resetpm {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin btn($bgColor, $color, $isBold) {
+  background-color: $bgColor;
+  color: $color;
+  border-radius: 50px;
+  padding: 20px;
+
+  @if ($isBold == "true") {
+    font-weight: bolder;
+  }
+}
+
+// Loops: Así es como boostrap genera algunas de sus clases
+@for $i from 1 to $limit {
+  .m-#{$i} {
+    margin: $i * $unit;
+  }
+  .p-#{$i} {
+    padding: $i * $unit;
+  }
+  .py-#{$i} {
+    padding: ($i * $unit) 0;
+  }
+}
+
+@for $i from 1 to 4 {
+  .w-#{$i * 25} {
+    width: $i * 25%;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  .col {
+    width: 50%;
+  }
+  .col-30 {
+    width: 30%;
+  }
+  .col-70 {
+    width: 70%;
+  }
+}
+
+.m-auto {
+  margin: 0 auto;
+}
